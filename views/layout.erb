@@ -8,12 +8,11 @@
       <link rel="stylesheet" href="/public/css/styles.css">
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-      <script src="/public/js/sidebar.js"></script>
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
       <style>
 
       body {
-        background-image: url("https://www.pexels.com/photo/human-in-black-track-pants-with-red-nike-sneakers-jumping-496557/");
+        background-color: #282828;
       }
 
       nav {
@@ -22,12 +21,41 @@
 
       h1 {
         text-align: center;
+        text-decoration-style: wavy;
+        color: white;
+
       }
+
+      .carousel{
+    background: #2f4357;
+    margin-top: 20px;
+}
+.carousel .item{
+    min-height: 280px; /* Prevent carousel from being distorted if for some reason image doesn't load */
+}
+.carousel .item img{
+    margin: 0 auto; /* Align slide image horizontally center */
+}
+.bs-example{
+	margin: 20px;
+}
 
 
       </style>
+
     </head>
     <body>
+      <nav>
+   <div class="nav-wrapper">
+     <a href="#!" class="brand-logo center">Logo</a>
+     <ul class="left hide-on-med-and-down">
+       <li><a href="sass.html">Sass</a></li>
+       <li><a href="badges.html">Components</a></li>
+       <li class="active"><a href="collapsible.html">JavaScript</a></li>
+     </ul>
+   </div>
+ </nav>
+
       <div>
         <%=yield%>
       </div>
