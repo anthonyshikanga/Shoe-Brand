@@ -1,0 +1,59 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,800);
+@import url(https://fonts.googleapis.com/css?family=Fontdiner+Swanky);
+#bizar-links-1 {
+  padding: 0;
+  overflow: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#bizar-links-1 .hero {
+  position: relative;
+  overflow: hidden;
+  min-height: 350px;
+  background: #000000;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+#bizar-links-1 .hero h1,
+.hero {
+  text-align: center;
+  color: #fff;
+  padding: 40px 0 10px 0;
+  position: relative;
+  z-index: 2;
+  font-family: arial, helvetica, "san-serif";
+  font-size: 1.4em;
+  text-transform: uppercase;
+  letter-spacing: 8px;
+}
+
+#bizar-links-1 .hero p {
+  font-size: 15px;
+  padding: 0;
+}
+
+#bizar-links-1 .hero img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  z-index: -10;
+  min-width:100%;
+  min-height:100%
+}
+
+#bizar-links-1 img {
+  opacity: 0.5;
+
+}
+
+#bizar-links-1 .btn-default {
+  color: #000;
+  background-color: #fff;
+  border-color: #ccc;
+  margin-bottom: 7pt;
+  font-family: arial, helvetica, "san-serif";
+  opacity: 0.8;
+}
