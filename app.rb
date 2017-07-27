@@ -26,15 +26,45 @@ require("bundler/setup")
 end
 
  get('/brands') do
+  @brands = Shoe.all()
    erb(:brands)
  end
 
- get('/stores/new') do
-   erb(:store_form)
+ post('/brands') do
+  name = params.fetch("name")
+  @brand = Shoe.new(:name =>name)
+  @brand.save()
+  @shoes = Shoe.all()
+  redirect '/brands'
  end
 
+ get ('/store/new') do
+  erb(:store_form)
+end
 
+get('/brand/new') do
+  erb(:brand_form)
+end
 
+get '/stores/:id/edit' do
+@store = Store.find(params.fetch("id").to_i)
+erb(:edit)
+end
+
+patch '/stores/:id' do
+  @store = Store.find(params.fetch("id").to_i)
+  @store_name = params.fetch('name')
+  @store.name = @store_name
+  @store.update(name: @store_name)
+  redirect '/'
+end
+
+delete('/stores/:id/delete') do
+  @stores = Store.all
+  @store = Store.find(params.fetch("id").to_i)
+  @store.destroy
+  erb(:stores)
+end
 
  #used bundler to require all of our gems for us rather than listing them individually in each file
  #used Dir class as a file loading shortcut to navigate to the directories with files that need to be required
