@@ -2,7 +2,7 @@
 
 <% if @brands.any?() %>
 <h3> Our Brands</h3>
-<ul>
+<ul class="text-design">
   <% @brands.each() do |brand| %>
 <li><a href="/brands/<%= brand.id()%>"><%= brand.name() %></a> </li>
 <% end %>
