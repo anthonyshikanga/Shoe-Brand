@@ -128,3 +128,8 @@
 .footer-bottom p.pull-left {
   padding-top: 6px;
 }
+.portfolio-item {
+    margin-bottom: 10px;
+    padding-right: 5px;
+    padding-left: 5px;
+}
